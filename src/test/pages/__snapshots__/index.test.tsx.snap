@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <main>
+      <h1
+        class="title"
+      >
+        Welcome to 
+        <a
+          href="https://nextjs.org"
+        >
+          Next.js!
+        </a>
+      </h1>
+    </main>
+    <footer>
+      footer
+    </footer>
+  </div>
+</DocumentFragment>
+`;
