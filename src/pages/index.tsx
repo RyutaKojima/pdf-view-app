@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Head from 'next/head'
 import {useRouter} from "next/router";
-import PdfViewer from "../components/PdfViewer";
+import PdfViewer from "../components/templates/PdfViewer";
 
 export const Home = (): JSX.Element => {
     const router = useRouter();
@@ -13,6 +13,11 @@ export const Home = (): JSX.Element => {
         }
     }, [router.query])
 
+    const usageDom = <div>
+        <p>使い方</p>
+        <p>{'/?url={pdf path}'}</p>
+    </div>
+
     return (
         <>
             <Head>
@@ -20,7 +25,7 @@ export const Home = (): JSX.Element => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            {pdfPath && <PdfViewer pdfPath={pdfPath}/>}
+            {pdfPath ? <PdfViewer pdfPath={pdfPath}/> : usageDom}
         </>
     )
 }
